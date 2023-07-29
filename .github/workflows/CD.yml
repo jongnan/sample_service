@@ -28,7 +28,7 @@ jobs:
 
       - name: 도커 이미지 빌드 & 푸시 by jib
         run: |
-          ./gradlew :sample-service:jib -Prelease
+          ./gradlew :jib -Prelease
         env:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
           DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
